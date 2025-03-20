@@ -18,10 +18,12 @@ Antes de comenzar, asegúrate de tener instalados los siguientes requisitos:
    git clone <URL_DEL_REPOSITORIO>
    cd proyecto_db
 2. Crea un entorno virtual e instálalo:
-python -m venv venv
-source venv/bin/activate  # En Windows: venv\Scripts\activate
-pip install -r requirements.txt
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # En Windows: venv\Scripts\activate
+   pip install -r requirements.txt
 
 3. Configura la base de datos MySQL. Si usas Docker, puedes iniciar un contenedor con el siguiente comando:
-docker run --name NOMBRE_CONTENEDOR -e MYSQL_ROOT_PASSWORD=CONTRASEÑA -e MYSQL_DATABASE=NOMBRE_DB -p 3306:3306 -d mysql:latest
+   ```bash
+   docker run --name NOMBRE_CONTENEDOR -e MYSQL_ROOT_PASSWORD=CONTRASEÑA -e MYSQL_DATABASE=NOMBRE_DB -p 3306:3306 -d mysql:latest
 Cambia NOMBRE_CONTENEDOR; CONTRASEÑA; NOMBRE_DB; por los datos con los que deseas crear con contenedor. 
