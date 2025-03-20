@@ -1,0 +1,10 @@
+#Ver contenedores, si agregan -a, buscan los activos
+docker ps
+
+#Identificar la IP de red en la que está corriendo el contenedor Docker
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <nombre_del_contenedor>
+
+#Iniciar el contenedor con el puerto mapeado
+docker run --name mysql2 -p 3306:3306 -e MYSQL_ROOT_PASSWORD=123 -e MYSQL_DATABASE=test -d mysql:latest
+
+
